@@ -28,4 +28,11 @@ export class UsersComponent implements OnInit {
   onGotoCategories() {
     this.router.navigateByUrl('/categories');
   }
+
+  onGetAnotherUserDetails() {
+    this.router.navigate(['/users', 2, 'Another User'], {
+      queryParams: { page: 2, search: 'another user' },
+      fragment: "loading"
+    });
+  }
 }

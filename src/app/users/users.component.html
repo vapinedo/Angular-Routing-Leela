@@ -10,3 +10,7 @@
 </p>
 
 <button (click)="onGotoCategories()" class="btn btn-primary">Go to Categories</button>
+<button [routerLink]="['/users', 1, 'valp']" [queryParams]="{ page: 1, search: 'valp' }" [fragment]="'load'"
+class="btn mx-3 btn-success">Get Valp Detail</button>
+
+<button (click)="onGetAnotherUserDetails()" class="btn btn-warning">Get another user details</button>
