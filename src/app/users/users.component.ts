@@ -21,6 +21,14 @@ export class UsersComponent implements OnInit {
         name: urlParam['name'],
       };
     });
+
+    this.activatedRoute.queryParams.subscribe((urlParams: any) => {
+      console.log(urlParams);
+    })
+    // console.log(this.activatedRoute.snapshot.queryParams);
+    // console.log(this.activatedRoute.snapshot.fragment);
+
+    this.activatedRoute.fragment.subscribe((urlFragments: any) => console.log(urlFragments))
   }
 
   ngOnInit(): void {}
