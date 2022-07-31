@@ -14,11 +14,11 @@ export class UsersComponent implements OnInit {
       id: this.activatedRoute.snapshot.params['id'],
       name: this.activatedRoute.snapshot.params['name'],
     };
-    
-    this.activatedRoute.params.subscribe((data: Params) => {
+
+    this.activatedRoute.params.subscribe((urlParam: Params) => {
       this.user = {
-        id: data['id'],
-        name: data['name'],
+        id: urlParam['id'],
+        name: urlParam['name'],
       };
     });
   }
