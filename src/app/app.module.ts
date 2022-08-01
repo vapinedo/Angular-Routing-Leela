@@ -11,8 +11,13 @@ import { NavbarComponent } from './navbar/navbar.component';
 
 const appRoutes: Routes = [
   { path: '', component: HomeComponent },
-  { path: 'users', component: UsersComponent },
-  { path: 'users/:id/:name', component: UsersComponent },
+  { 
+    path: 'users', 
+    component: UsersComponent, 
+    children: [
+      { path: ':id/:name', component: UsersComponent },
+    ]
+  },
   { path: 'categories', component: CategoriesComponent },
 ];
 
